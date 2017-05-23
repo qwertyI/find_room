@@ -1,0 +1,17 @@
+1.不同的房源类型，正则不相同，需要每个都判断，配置，抓取，处理
+
+2.数据库的反复修改，确认
+
+3.爬取网站信息的不规范需要额外的处理
+
+4.url去重与增量爬取
+
+5.反爬虫机制的处理。
+    5.1.选择proxy ip pool的方法
+        5.1.1.TypeError: to_bytes must receive a unicode, str or bytes object, got NoneType
+            往request.meta中传入ip地址时，需要是'http://xxx.xx.x.xx:xxx'的形式，否则会报错
+
+
+
+将log放入文件方便查验
+scrapy crawl five_eight -s LOG_FILE=find_room.log
